@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function v(){
+            var name=document.getElementById('name').value;
+            var email=document.getElementById('email').value;
+            var number=document.getElementById('no').value;
+            var gender=document.getElementById('gen').value;
+            var color=document.getElementById('c').value;
+        if (name==="") {
+            alert("enter name properly");
+        }
+        if (email===""|| !email.includes("@")) {
+            alert("enter email");
+        }
+        if (number==="" || number.length!=10) {
+            alert("enter no");
+        }
+        if (color==="") {
+            alert("enter color properly");
+        }
+        var h="Name :"+name+"\n"+
+        "email : "+email+"\n"+"number :"+number+"\n"
+        +"gender :"+gender+"\n"+"color :"+color+"\n";
+        alert(h);
+        }
+    </script>
+</head>
+<body>
+   
+    <h3>FORM VALIDATION</h3>
+    <div>
+        <form>
+            <input type="text" id="name" placeholder="enter your name">
+            <input type="text" id="email" placeholder="enter your mail">
+            <input type="text" id="no" placeholder="enter your no">
+            <p>select your gender</p>
+            <select id="gen">
+            <option value="male">male</option>
+            <option value="female">femals</option>
+            <option value="chakka" selected>suleguttsulemunde</option></select>
+            <input type="text" id="c" placeholder="fav color">
+            <button type="button" onclick="v()">Submit</button>
+        </form>
+    </div>
+    
+</body>
+</html>

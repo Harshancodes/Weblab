@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d{
+            text-align:center;
+        }
+        form{
+            border:1px solid black;
+            padding:20px;
+            width:200px;
+            
+        }
+
+
+    </style>
+    <script>
+        function val(){
+            usr=document.getElementById("usr").value;
+            name=document.getElementById("name").value;
+            pass=document.getElementById("pass").value;
+            email=document.getElementById("email").value;
+
+        var x=" usr-id"+usr+"\n"+
+        " name:"+name+"\n"+
+        " password :"+pass+"\n"+
+        " email:"+email+"\n";
+        alert(x);
+
+        if (usr.length <5 ||use.length>12){
+            alert("user-id  lenth is not appropriate\n");
+        }
+        var no=[1,2,3,4,5,6,7,8,9]
+        if (/[0-9]/.test(name)){
+            alert('wrong itcontains number')
+        }
+        if (!/[0-9]/.test(pass)){
+            alert('add no to password number')
+        }
+        if (!/[A-Z]/.test(pass)){
+            alert('add no to password number')
+        }
+        if (!/[#$@%^&*-+]/.test(pass)){
+            alert('add no to password number')
+        }
+        if (email.include("@")){
+            alert('smowsmo')
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="d" >
+    <h2>FORM  TO  COLLECT  DATA</h2><br>
+        <p>Please fill the below required details</p>
+
+   <center>   <form>
+            user -id:<input type="text" id="usr" placeholder="name"><br><br>
+            Name:<input type="text" id="name"placeholder="name"><br><br>
+            Password:<input type="password" id="pass" placeholder="name"><br><br>
+            Email:<input type="email" id="email" placeholder="name"><br><br>
+            <button type="Submit" onclick="val()">Submit</button>
+        </form></center>  
+</div>
+</body>
+</html>

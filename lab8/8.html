@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<head>
+    <html lang="en">
+    <meta charset="UTF-8">  
+    <title>marks and bets</title>
+    <style>
+    .d{
+            text-align:center;
+     }
+    h2{
+        text-align:center;
+        background-color: aqua;
+
+    }
+    form{
+       
+        border: 2px solid black;
+        background-color: azure;
+        width:300px;
+        padding-top: 30px;
+        padding:20px;
+    }
+    body{
+        background-color:black;
+        color: white;
+    }
+    </style>
+    <script>
+        function call(){
+            regno=document.getElementById("regno").value;
+            Subcode=document.getElementById("subcode").value;
+            m1=parseInt(document.getElementById("m1").value);
+            m2=parseInt(document.getElementById("m2").value);
+            m3=parseInt(document.getElementById("m2").value);
+
+            x=
+                "regno "+ regno + "\n "+
+                "subcode :" + Subcode +"\n"+
+                "mark -1 :" + m1 + "\n"+
+                "mark -2 :" + m2 + "\n"+
+                "mark -3 :" + m3 + "\n"
+            ;
+            alert(x)
+            marks=[m1,m2,m2]
+            marks.sort()
+            avg=marks[0]+marks[1]
+            avg=avg/2
+            alert("heighest 2 mark is "+avg)
+
+        }
+    </script>
+
+
+
+</head>
+  <div class="d">
+    <h2>Form containing to take inputs </h2><br>
+    <p>
+        Please enter the below required information
+    </p>
+   <center> <form>
+        Regno <input type="text" id="regno" placeholder="enter your regno"><br><br>
+    Subcode<input type="text" id="subcode" placeholder="enter your sub code"><br><br>
+        mark1<input type="text" id="m1" placeholder="enter your mark1"><br><br>
+        mark2<input type="text" id="m2" placeholder="enter your mark2"><br><br>
+        mark3<input type="text" id="m3" placeholder="enter your mark3"><br><br>
+        <button type="button" onclick="call()">Submit</button>
+
+
+    </form></center>
+  </div>
+
+
+
+
+
+</html>
